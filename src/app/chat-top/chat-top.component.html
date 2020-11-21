@@ -1,0 +1,53 @@
+<div class="">
+  <mat-toolbar class="top" style="height: 50px;">
+    <!-- <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"> -->
+      <!-- <mat-icon class="bg-danger rounded-circle">menu</mat-icon> -->
+      <img style="width: 40px; height: 40px; border-radius: 20px;" [src]="active.file" alt="" data-toggle="modal" data-target="#myModal">
+    <!-- </button> -->
+    <small style="color: black; font-size: 15px; line-height: 15px; margin-left: 15px; margin-top: 10px;">{{active.userName|uppercase}} <p style="color: #F3F3F3;">{{active.number}}</p> </small>
+    <small *ngIf="selectedContact" class="select-contact-position" style="color: black; font-size: 15px; line-height: 15px;">
+      <img style="width: 40px; height: 40px; border-radius: 20px;" [src]="selectedContact.file" alt="">
+      {{selectedContact.name}} </small>
+
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon class="srch">search</mat-icon>
+    </button>
+  </mat-toolbar>
+  <!-- The Modal -->
+  <div class="modal fade user-modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header head">
+          <h4 class="modal-title profile-title">Profile</h4>
+          <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body content">
+          <div class="pix-div pl-4">
+            <img style="width: 200px; height: 200px; border-radius: 200px;" [src]="active.file" alt="">
+          </div>
+          <p class="m-3" style="color: #EE8181;">Your Name</p>
+          <p class="m-3" style="color: gray;">{{active.name|uppercase}}</p>
+          <hr>
+          <p class="m-3" style="color: #EE8181;">Phone Number</p>
+          <p class="m-3" style="color: gray;">{{active.number}}</p>
+          <hr>
+          <p class="m-3" style="color: #EE8181;">BIO</p>
+          <p class="m-3" style="color: gray;">{{active.address}}</p>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+

@@ -1,0 +1,44 @@
+<div class="row" style="height: 100vh; width: 100%;">
+  <div class="col-md-3 side" >
+    <p class="text-white ml-4 signin"  >Sign In</p>
+    <div class="text-white ml-4 text">Welcome to <br> Lead Chat App. <br> Connect With Friends and Family</div>
+  </div>
+  <div class="col-md-9 p-3 main">
+<form class="example-form form-group bg-info p-5 form-position">
+  <div *ngIf="!loginStatus" class="alert alert-danger alert-dismissible fade show">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong>Ops!</strong> Sorry, Incorrect Username or password.
+  </div>
+  <mat-form-field class="example-full-width pt-3">
+    <mat-label>USERNAME OR EMAIL</mat-label>
+    <input [(ngModel)]='userName' name="userName" class="" type="text" matInput placeholder="Ex. Mark Henry">
+    <mat-hint>Errors appear instantly!</mat-hint>
+    <!-- <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+      Please enter a valid email address
+    </mat-error>
+    <mat-error *ngIf="emailFormControl.hasError('required')">
+      Email is <strong>required</strong> -->
+    <!-- </mat-error> -->
+  </mat-form-field>
+
+  <mat-form-field class="example-full-width pt-3">
+    <mat-label>PASSWORD</mat-label>
+    <input [(ngModel)]='password' name='password' class="" type="email" matInput placeholder="Ex. example@gmail.com">
+    <mat-hint>Errors appear instantly!</mat-hint>
+    <!-- <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+      Please enter a valid email address
+    </mat-error>
+    <mat-error *ngIf="emailFormControl.hasError('required')">
+      Email is <strong>required</strong> -->
+    <!-- </mat-error> -->
+  </mat-form-field>
+
+  <div class="mt-3">
+    <button (click)='login()' class="btn btn-danger " type="submit">SIGN IN</button> <span class="p-3  or">Or</span>
+    <button routerLink='/signup' class="btn  signin-btn" type="submit">SIGN UP</button>
+
+  </div>
+</form>
+  </div>
+</div>
+

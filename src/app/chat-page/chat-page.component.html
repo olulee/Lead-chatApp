@@ -1,0 +1,63 @@
+<div class="container bg-dark p-0" >
+  <!-- <div class="row"> -->
+    <div class="">
+      <app-chat-top></app-chat-top>
+    </div>
+  <!-- </div> -->
+  <div class="row w-100 ml-0">
+    <div class="col-3" style=" background-color: #FFFFFF; overflow: auto ;max-height: 85vh !important;">
+      <div class="row">
+        <div class="col-12 contact-search">
+          <span class>
+            <mat-form-field appearance="fill" >
+              <!-- <mat-label>Legacy form field</mat-label> -->
+              <mat-icon matPrefix>search</mat-icon>
+              <input [(ngModel)]="filterContact" matInput placeholder="Search or filter your chat">
+              <!-- <mat-hint>Hint</mat-hint> -->
+            </mat-form-field>
+          </span>
+        </div>
+      </div>
+      <div class="row">
+        <div *ngFor="let contact  of contacts|filter:filterContact" class="col-12">
+          <div class="m-2" (click)='pickContact(contact.number)'>
+            <div class="row">
+              <div class="col-2">
+                <img class="rounded-circle" style="width: 25px; height: 25px;" [src]="contact.file" alt="">
+              </div>
+              <div class="col-10">
+                <span>{{contact.name}} <br> <i class="recent-message" >{{contact.recentMessage}}</i> </span>
+              </div>
+            </div>
+          </div>
+          <hr>
+          <!-- <mat-divider style="background-color: green;"></mat-divider> -->
+        </div>
+      </div>
+
+    </div>
+    <div class="col-9" style="background-color: #EEDFCE; overflow: auto;">
+      <input class="searh-chat" [(ngModel)]='searchMsg' placeholder="Search message" type="text">
+      <div class="row mb-4"style="height: 80vh !important; max-height: 80vh !important; overflow:auto !important">
+        <div class="col-12 mt-5">
+          <ul *ngFor="let msg of sent|filtermsg:searchMsg">
+           <span *ngIf="msg.check" class="float-right p-1 msg1 "  style="background-color: #EE8282;"> {{msg.message}} {{msg.seen}} <span style="font-size:10px;"> {{msg.time}} <span [style.color]=" msg.seen ?'green':'grey'"><mat-icon class="done">done</mat-icon></span> </span></span> <br>
+           <span *ngIf="!msg.check" class="float-left p-1 msg1 "  style="background-color: #00C267;"><span style="font-size:10px;"> {{msg.time}}</span> {{msg.message}} <mat-icon class="done">done</mat-icon></span> <br>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 msg">
+          <input class="inp " [(ngModel)]="message" name="message" type="text" placeholder="Type a message">
+          <span style="margin-top:10px !important">
+            <mat-icon (click)="sendMessage()" class="msg-icon" matPrefix>message</mat-icon>
+          </span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+

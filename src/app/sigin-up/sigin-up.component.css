@@ -1,0 +1,32 @@
+.side{
+  background-color: #E22A2A;
+}
+.main{
+  background-color: #FBFBFB;
+}
+.signin{
+  margin-top: 40px;
+  font-weight: 1000;
+  font-size: 20px;
+}
+
+.text{
+  margin-top: 80px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 700px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+.or{
+  font-size: 15px;
+}
+.signin-btn{
+  background-color: #FBFBFB;
+}

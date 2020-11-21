@@ -1,0 +1,60 @@
+/* .example-container {
+  width: 400px;
+  height: 200px;
+  /* margin: 10px; */
+  /* border: 1px solid #555; */
+/* } */ */
+/* .side{ */
+  /* background-color: #FFFFFF; */
+  /* height: 700px !important; */
+  /* height: 100vh !important; */
+/* } */
+.contact-search{
+  background-color: #F3F3F3;
+  height: 50px;
+}
+.msg{
+  background-color: #F3F3F3;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+  /* text-align: center; */
+
+}
+.inp{
+  width: 700px;
+  height: 30px;
+
+  border: 0;
+  border-radius: 40px;
+}
+.inp:focus{
+  outline: none;
+}
+
+.msg-icon{
+  margin-left: 60px;
+}
+.msg1{
+  border-radius: 10px;
+}
+ ::-webkit-scrollbar{
+    width: 0px !important;
+ }
+.recent-message{
+  color: grey;
+  font-size: 12px;
+}
+.done{
+  /* color: grey !important; */
+  font-size: 15px;
+}
+.searh-chat{
+  margin-top: 5px;
+  border: 0px !important;
+  border-radius: 10px;
+}
+.searh-chat:focus{
+  outline: none;
+}

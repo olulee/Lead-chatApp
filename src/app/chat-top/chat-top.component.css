@@ -1,0 +1,37 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+.top{
+  background-color: #FFFFFF;
+}
+.srch{
+  color: gray;
+}
+.select-contact-position{
+  margin-left: 150px;
+}
+.user-modal{
+  width: 300px !important;
+  height: 900px !important ;
+  max-height: 900px !important;
+  margin-left: 105px;
+  margin-top: 10px;
+}
+.head{
+  height: 100px;
+  background-color: #EE8181;
+}
+.profile-title{
+  font-family: Georgia, Times, 'Times New Roman', serif;
+  font-size: 25px;
+  color: white;
+  margin-top: 30px;
+  margin-left: 20px;
+}
+.content{
+  height: 460px;
+}
+.pix-div{
+  background-color: #E5E5E5;
+  height: 200px;
+}
